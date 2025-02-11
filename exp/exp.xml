@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<EXPERIMENT_SET>
+  <EXPERIMENT alias="fly_ran80849_bike98" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <TITLE>Host-derived Usutu virus sequencing on Oxford Nanopore RealION platform.</TITLE>
+    <STUDY_REF accession="PRJEB83966"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION></DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="ran80849_bike18"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME></LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+      </LIBRARY_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <OXFORD_NANOPORE>
+        <INSTRUMENT_MODEL>RealION</INSTRUMENT_MODEL>
+      </OXFORD_NANOPORE>
+    </PLATFORM>
+    <EXPERIMENT_ATTRIBUTES>
+      <EXPERIMENT_ATTRIBUTE>
+        <TAG>library preparation date</TAG>
+        <VALUE>not collected</VALUE>
+      </EXPERIMENT_ATTRIBUTE>
+    </EXPERIMENT_ATTRIBUTES>
+  </EXPERIMENT>
+  <EXPERIMENT alias="fly_ran80858_bike98" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <TITLE>Host-derived Usutu virus sequencing on Oxford Nanopore RealION platform.</TITLE>
+    <STUDY_REF accession="PRJEB83966"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION></DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="ran80858_bike08"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME></LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+      </LIBRARY_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <OXFORD_NANOPORE>
+        <INSTRUMENT_MODEL>RealION</INSTRUMENT_MODEL>
+      </OXFORD_NANOPORE>
+    </PLATFORM>
+    <EXPERIMENT_ATTRIBUTES>
+      <EXPERIMENT_ATTRIBUTE>
+        <TAG>library preparation date</TAG>
+        <VALUE>not collected</VALUE>
+      </EXPERIMENT_ATTRIBUTE>
+    </EXPERIMENT_ATTRIBUTES>
+  </EXPERIMENT>
+  <EXPERIMENT alias="fly_ran80858_bike96" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <TITLE>Host-derived Usutu virus sequencing on Oxford Nanopore FakeION platform.</TITLE>
+    <STUDY_REF accession="PRJEB83966"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION></DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="ran80858_bike16"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME></LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+      </LIBRARY_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <OXFORD_NANOPORE>
+        <INSTRUMENT_MODEL>FakeION</INSTRUMENT_MODEL>
+      </OXFORD_NANOPORE>
+    </PLATFORM>
+    <EXPERIMENT_ATTRIBUTES>
+      <EXPERIMENT_ATTRIBUTE>
+        <TAG>library preparation date</TAG>
+        <VALUE>not collected</VALUE>
+      </EXPERIMENT_ATTRIBUTE>
+    </EXPERIMENT_ATTRIBUTES>
+  </EXPERIMENT>
+  <EXPERIMENT alias="fly_ran80837_bike99" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <TITLE>Host-derived Usutu virus sequencing on Oxford Nanopore FakeION platform.</TITLE>
+    <STUDY_REF accession="PRJEB83966"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION></DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="ran80837_bike29"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME></LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+      </LIBRARY_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <OXFORD_NANOPORE>
+        <INSTRUMENT_MODEL>FakeION</INSTRUMENT_MODEL>
+      </OXFORD_NANOPORE>
+    </PLATFORM>
+    <EXPERIMENT_ATTRIBUTES>
+      <EXPERIMENT_ATTRIBUTE>
+        <TAG>library preparation date</TAG>
+        <VALUE>not collected</VALUE>
+      </EXPERIMENT_ATTRIBUTE>
+    </EXPERIMENT_ATTRIBUTES>
+  </EXPERIMENT>
+  <EXPERIMENT alias="fly_ran80844_bike91" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <TITLE>Host-derived Usutu virus sequencing on Oxford Nanopore FakeION platform.</TITLE>
+    <STUDY_REF accession="PRJEB83966"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION></DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="ran80844_bike51"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME></LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+      </LIBRARY_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <OXFORD_NANOPORE>
+        <INSTRUMENT_MODEL>FakeION</INSTRUMENT_MODEL>
+      </OXFORD_NANOPORE>
+    </PLATFORM>
+    <EXPERIMENT_ATTRIBUTES>
+      <EXPERIMENT_ATTRIBUTE>
+        <TAG>library preparation date</TAG>
+        <VALUE>not collected</VALUE>
+      </EXPERIMENT_ATTRIBUTE>
+    </EXPERIMENT_ATTRIBUTES>
+  </EXPERIMENT>
+  <EXPERIMENT alias="fly_ran80844_bike99" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <TITLE>Host-derived Usutu virus sequencing on Oxford Nanopore GradeION platform.</TITLE>
+    <STUDY_REF accession="PRJEB83966"/>
+    <DESIGN>
+      <DESIGN_DESCRIPTION></DESIGN_DESCRIPTION>
+      <SAMPLE_DESCRIPTOR refname="ran80844_bike59"/>
+      <LIBRARY_DESCRIPTOR>
+        <LIBRARY_NAME></LIBRARY_NAME>
+        <LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY>
+        <LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE>
+        <LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+        <LIBRARY_LAYOUT>
+          <SINGLE/>
+        </LIBRARY_LAYOUT>
+      </LIBRARY_DESCRIPTOR>
+    </DESIGN>
+    <PLATFORM>
+      <OXFORD_NANOPORE>
+        <INSTRUMENT_MODEL>GradeION</INSTRUMENT_MODEL>
+      </OXFORD_NANOPORE>
+    </PLATFORM>
+    <EXPERIMENT_ATTRIBUTES>
+      <EXPERIMENT_ATTRIBUTE>
+        <TAG>library preparation date</TAG>
+        <VALUE>not collected</VALUE>
+      </EXPERIMENT_ATTRIBUTE>
+    </EXPERIMENT_ATTRIBUTES>
+  </EXPERIMENT>
+</EXPERIMENT_SET>

@@ -1,0 +1,12 @@
+# Ignore everything inside the helpers/ folder
+helpers/
+
+# Ignore any file that starts with "SECRET_" in any subdirectory
+*/SECRET_*
+*/ERROR_*
+/67.ENA_isolates_28-10-24/
+/67.ENA_isolates_28-10-24*
+/67.ENA_isolates_28-10-24/*
+
+.DS_Store
+.vscode

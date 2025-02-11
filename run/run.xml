@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RUN_SET>
+  <RUN alias="ran80849_bike18" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <EXPERIMENT_REF refname="fly_ran80849_bike98"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="ran80849_BC98.fastq.gz" filetype="fastq" checksum_method="MD5" checksum="7430f488a40100e3b7f259316e911c18"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="ran80858_bike08" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <EXPERIMENT_REF refname="fly_ran80858_bike98"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="ran80858_BC98.fastq.gz" filetype="fastq" checksum_method="MD5" checksum="793e8cd97132b23aa11e4c5dc3edfad8"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="ran80858_bike16" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <EXPERIMENT_REF refname="fly_ran80858_bike96"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="ran80858_BC96.fastq.gz" filetype="fastq" checksum_method="MD5" checksum="81f42593e5f0a26ed9f8e76b612df07e"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="ran80837_bike29" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <EXPERIMENT_REF refname="fly_ran80837_bike99"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="ran80837_BC99.fastq.gz" filetype="fastq" checksum_method="MD5" checksum="6d27b39ff2c628ae1d0172ce3aa3d655"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="ran80844_bike51" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <EXPERIMENT_REF refname="fly_ran80844_bike91"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="ran80844_BC91.fastq.gz" filetype="fastq" checksum_method="MD5" checksum="e07ac478e8078879a494a30aaddefa7e"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+  <RUN alias="ran80844_bike59" center_name="One Health Pact Consortium (2020–2022), EcoAlert Collaborative Team (2016–2019)">
+    <EXPERIMENT_REF refname="fly_ran80844_bike99"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="ran80844_BC99.fastq.gz" filetype="fastq" checksum_method="MD5" checksum="9f50537f4f0aab0370880658a88f0b13"/>
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+</RUN_SET>
