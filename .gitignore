@@ -10,5 +10,9 @@ helpers/
 /TEST/
 ./TEST/*
 
+./TEST_2/*
+/TEST_2/
+
 .DS_Store
 .vscode
+mod_access_file_parser.py

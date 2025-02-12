@@ -1,21 +1,40 @@
 #!/bin/bash
 
 # make-submit-xml.sh - Script to generate and submit ENA XML files
-#
-# Usage:
-#   make-submit-xml.sh -t  (Run in test mode, default)
-#   make-submit-xml.sh -s  (Run in submission mode)
-#   make-submit-xml.sh -h  (Display this help message)
 
 # READ THE DOCS!
 # https://ena-docs.readthedocs.io/en/latest/submit/reads/programmatic.html
 # https://ena-docs.readthedocs.io/en/latest/update/metadata.html
 
+# Function to display usage message
+usage() {
+  cat <<EOF
+Usage: $0 [OPTIONS]
+
+Options:
+  -t    Run in test mode (default)
+  -s    Run in submission mode
+  -h    Display this help message
+
+This script generates and submits XML files to ENA.
+Use -t for testing and -s for actual submission.
+EOF
+}
+
+# Ensure only valid options (-t, -s, -h) are accepted
+while getopts ":tsh" opt; do
+  case $opt in
+    t) mode="test" ;;      # Test mode
+    s) mode="submission" ;; # Submission mode
+    h) usage; exit 0 ;;     # Help flag
+    \?) usage; exit 1 ;;    # Invalid flag
+  esac
+done
+
 # Exit immediately if a command fails
 set -e
 
-
-# Check if U_NAME and PASS_WORD are set as environment variables, if not, prompt the user
+# Check if credentials are set, otherwise ask the user
 if [ -z "$U_NAME" ]; then
     read -p "Enter Username: " U_NAME
 fi
@@ -29,78 +48,85 @@ fi
 test_url="https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
 submit_url="https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
-# Function to display usage message
-usage() {
-  echo "Usage: $0 [-t | -s | -h]"
-  echo "  -t    Run in test mode (default)"
-  echo "  -s    Run in submission mode"
-  echo "  -h    Display this help message"
-}
-
-# Display usage message first
+# Confirm submission mode with the user
 echo ""
-read -p "Do you want to continue with the default TEST mode? (Y/n): " user_choice
+read -p "Continue in (default) TEST mode? (Y/n): " user_choice
 user_choice=${user_choice:-Y}  # Default to "Y" if the user presses Enter
 
 # Determine mode based on user input
 if [[ "$user_choice" =~ ^[Nn]$ ]]; then
   mode="submit"
-  echo "Running in SUBMISSION mode"
+  #echo "Running in SUBMISSION mode"
 else
   mode="test"
-  echo "Running in TEST mode (default)"
+  #echo "Running in TEST mode (default)"
 fi
 
-# Set appropriate URL
+# Set URL based on mode
 url="$test_url"
 [[ "$mode" == "submit" ]] && url="$submit_url"
 
-# Process SAMPLE submission
+echo "----------------------------------------------------------------------------------"
+echo "  📂 Running in $mode mode"
+echo "  📤 Using submission URL: $url"
+echo "----------------------------------------------------------------------------------"
+
+### PROCESS SAMPLE SUBMISSION ###
 cd samSubmit
-echo "Generating sample XML..."
-python3 create_sam_lxml.py
-echo "Created sam.xml"
+echo ""
+date
+echo "  🔄 Generating sample XML..."
+python3 create_sam_xml.py
+echo "  ✅ Created sam.xml"
+echo ""
 date
 
-echo "Submitting sample XML..."
+echo "  🚀 Submitting sample XML..."
 rm -f *samLog.txt
 
-# For submiting new metadata objects
+# Uncomment based on requirement:
+# Submit new metadata objects:
 # curl -u "$U_NAME:$PASS_WORD" -F "SUBMISSION=@add_submission.xml" -F "SAMPLE=@sam.xml" "$url" >> submit_samLog.txt 2>&1
 
-# For updating existing metadata objects
+# Update existing metadata objects:
 # curl -u "$U_NAME:$PASS_WORD" -F "SUBMISSION=@modify_submission.xml" -F "SAMPLE=@sam.xml" "$url" >> modify_samLog.txt 2>&1
-echo "Submitted sam.xml"
+
+echo "  ✅ Submitted sam.xml"
+echo ""
 date
 
-# Process EXPERIMENT submission
+### PROCESS EXPERIMENT SUBMISSION ###
 cd ../exp
-echo "Generating experiment XML..."
-python3 create_exp_lxml.py
+echo "  🔄 Generating experiment XML..."
+python3 create_exp_xml.py
 cp exp.xml ../runExpSubmit/
-echo "Created exp.xml"
+echo "  ✅ Created exp.xml"
+echo ""
 date
 
-# Process RUN submission
+### PROCESS RUN SUBMISSION ###
 cd ../run
-echo "Generating run XML..."
-python3 create_run_lxml.py
+echo "  🔄 Generating run XML..."
+python3 create_run_xml.py
 cp run.xml ../runExpSubmit/
-echo "Created run.xml"
+echo "  ✅ Created run.xml"
+echo ""
 date
 
-# Submit RUN and EXPERIMENT data
+### SUBMIT EXPERIMENT AND RUN DATA ###
 cd ../runExpSubmit/
-echo "Submitting experiment and run XML..."
+echo "  🚀 Submitting experiment and run XML..."
 rm -f *runExpLog.txt
 
-# For submiting new metadata objects
+# Uncomment based on requirement:
+# Submit new metadata objects:
 # curl -u "$U_NAME:$PASS_WORD" -F "SUBMISSION=@add_submission.xml" -F "RUN=@run.xml" -F "EXPERIMENT=@exp.xml" "$url" >> submit_runExpLog.txt 2>&1
 
-# For updating existing metadata objects
+# Update existing metadata objects:
 # curl -u "$U_NAME:$PASS_WORD" -F "SUBMISSION=@modify_submission.xml" -F "RUN=@run.xml" -F "EXPERIMENT=@exp.xml" "$url" >> modify_runExpLog.txt 2>&1
 
-echo "Submitted run.xml and exp.xml"
+echo "  ✅ Submitted run.xml and exp.xml"
+echo ""
 date
 
-echo "Process completed successfully!"
+echo "  🎉 Process completed successfully!"
