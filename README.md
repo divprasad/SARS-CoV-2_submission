@@ -1,16 +1,13 @@
-# README
-
 ## Overview
 
-This repository is specific for SARS-CoV-2 virus submission as it has been adapted accordingly.
+This repository is specific for SARS-CoV-2 submission to the European Nucleotide Archive (ENA). It includes scripts and dummy data for converting TSV metadata into the required XML format and submitting sample, experiment, and run metadata objects all in one go.
 
-It contains scripts and dummy data for generating and submitting XML files to the European Nucleotide Archive (ENA). The scripts convert TSV metadata into XML files with the required structure and submit sample, experiment, and run metadata objects all in one go.
+The wrapper script `make-submit-xml.sh` automates the entire process, including XML generation, submission, and modification of existing ENA metadata objects, using [programmatic ENA submission](https://ena-docs.readthedocs.io/en/latest/submit/reads/programmatic.html).
 
-The wrapper script `make-submit-xml.sh` automates XML generation and submission (or modification of existing) ENA metadata objects, using [programmatic ENA submission](https://ena-docs.readthedocs.io/en/latest/submit/reads/programmatic.html).
 
 ---
 
-## Installation
+### Installation
 
 Install dependencies:
 ```
@@ -70,6 +67,7 @@ this_repo
 │   └── run.xml
 └── samSubmit/                  # Sample metadata
     ├── create_sam_xml.py
+    ├── add_submission.xml
     ├── modify_submission.xml
     ├── sam.tsv
     └── sam.xml
@@ -78,5 +76,5 @@ this_repo
 
 ### Notes  
 
-- Ensure that the sample metadata object is submitted before running the experiment and run scripts.
+- Ensure that the sample metadata objects are submitted before submitting the experiment and run metadata objects.
 - Ensure that the TSV files include all required fields for metadata XML generation.
